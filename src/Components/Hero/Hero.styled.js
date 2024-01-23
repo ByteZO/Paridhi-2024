@@ -2,17 +2,25 @@ import styled from "styled-components";
 
 export const HeroMain = styled.div`
   height: 90vh;
-  width: 100%;
-
+  width: 100vw;
   position: relative;
+  @media (max-width: 600px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const HeroContain = styled.div`
-  top: 15vh;
+  top: 15%;
   height: 50%;
   width: 50%;
   position: absolute;
-  right: 10vw;
+  right: 10%;
+  @media (max-width: 600px) {
+    top: 0;
+    right: 0;
+  }
 `;
 
 export const CountdownBox = styled.div`
@@ -22,7 +30,7 @@ export const CountdownBox = styled.div`
   margin-top: 15px;
   border-radius: 10px;
   background-color: #fd2963;
-  /* padding: 10px; */
+
   height: 50px;
   width: 200px;
   text-align: center;

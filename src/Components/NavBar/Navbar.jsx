@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   NavbarContainer,
   Logo,
+  MenuBtn,
   NavList,
   NavItem,
   NavLink,
 } from "./Navbar.styled";
 
 const Navbar = () => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+    console.log(isClicked);
+  };
+
   return (
     <NavbarContainer>
       <Logo>Paridhi</Logo>
-      <NavList>
+
+      <MenuBtn onClick={handleClick}>
+        <i className="fas fa-bars"></i>
+      </MenuBtn>
+      <NavList $clicked={isClicked}>
         <NavItem>
           <NavLink href="">Events</NavLink>
         </NavItem>
