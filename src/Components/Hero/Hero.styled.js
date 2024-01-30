@@ -95,5 +95,5 @@ const dripAnimation = keyframes`
 `;
 
 export const DrippingDigit = styled.div`
-  /* animation: ${dripAnimation} 1s ease-in-out infinite; */
+  
 `;
