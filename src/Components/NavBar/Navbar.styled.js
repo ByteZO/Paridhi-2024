@@ -5,6 +5,7 @@ const underlineAnimation = keyframes`
     width: 0;
     background-color: transparent;
   }
+
   to {
     width: 50%;
     background-color: red;
@@ -51,7 +52,7 @@ export const NavList = styled.ul`
     right: ${({ $clicked }) => ($clicked ? "0" : "-100vw")};
 
     background: black;
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -89,6 +90,24 @@ export const NavItem = styled.li`
     margin: 40px 0;
     font-size: larger;
     font-weight: 900;
+
+    &:hover {
+      transform: scale(1.2);
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 50%;
+      height: 2px;
+      background-color: red;
+      font-size: 30px;
+      animation: ${underlineAnimation} 0.4s ease-out;
+    }
   }
 `;
 

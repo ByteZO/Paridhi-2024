@@ -1,9 +1,12 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const HeroMain = styled.div`
   height: 90vh;
   width: 100vw;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   @media (max-width: 600px) {
     display: flex;
     align-items: center;
@@ -11,50 +14,86 @@ export const HeroMain = styled.div`
   }
 `;
 
-export const HeroContain = styled.div`
-  top: 15%;
-  height: 50%;
-  width: 50%;
-  position: absolute;
-  right: 10%;
+export const HeroContainer = styled.div`
+  height: 80%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 0 0 10% 0;
+`;
+
+export const Title = styled.div`
+  font-size: 3rem;
+  font-weight: 900;
+`;
+
+export const HeroText = styled.div`
+  font-size: large;
+  text-align: center;
   @media (max-width: 600px) {
-    top: 0;
-    right: 0;
+    font-weight: 800;
+    padding: 3%;
   }
 `;
 
-export const CountdownBox = styled.div`
+export const CountdownContainer = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  height: 30%;
+  @media (max-width: 600px) {
+    gap: 2%;
+  }
+`;
+
+export const CountdownItem = styled.div`
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
-  border-radius: 10px;
-  background-color: #fd2963;
-
-  height: 50px;
-  width: 200px;
-  text-align: center;
+  height: 100%;
+  width: 30%;
+  font-size: 5rem;
+  @media (max-width: 600px) {
+    font-size: 2rem;
+  }
 `;
 
-export const CountdownTimer = styled.div`
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
+export const CountText = styled.div`
+  font-size: 15px;
+  font-weight: 300;
+  @media (max-width: 600px) {
+    font-size: 10px;
+    font-weight: 800;
+  }
 `;
 
-export const Headline = styled.h2`
-  font-weight: bold;
-  font-size: 60px;
-  color: #fff;
+const dripAnimation = keyframes`
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(20%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 `;
 
-export const SubHeadline = styled.h2`
-  font-weight: bold;
-  font-size: 60px;
-  color: #fd2963;
-`;
-
-export const Text = styled.p`
-  font-size: 1.5rem;
-  color: #fff;
+export const DrippingDigit = styled.div`
+  /* animation: ${dripAnimation} 1s ease-in-out infinite; */
 `;
