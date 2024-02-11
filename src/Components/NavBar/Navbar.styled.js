@@ -96,18 +96,6 @@ export const NavItem = styled.li`
       margin-left: 15px;
       margin-right: 15px;
     }
-
-    &:hover::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 50%;
-      height: 2px;
-      background-color: red;
-      font-size: 30px;
-      animation: ${underlineAnimation} 0.4s ease-out;
-    }
   }
 `;
 

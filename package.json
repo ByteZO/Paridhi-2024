@@ -17,7 +17,8 @@
     "react-router-dom": "^6.21.3",
     "styled-components": "^6.1.8",
     "swiper": "^11.0.6",
-    "tsparticles": "^3.1.0"
+    "tsparticles": "^3.1.0",
+    "vanilla-tilt": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

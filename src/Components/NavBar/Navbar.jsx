@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const handleClick = () => {
     setIsClicked(!isClicked);
-    console.log(isClicked);
+ 
   };
 
   return (

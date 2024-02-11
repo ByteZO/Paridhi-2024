@@ -40,16 +40,16 @@ const BackgroundAnimation = ({ children }) => {
           },
           repulse: {
             distance: 200,
-            duration: 0.4,
+            duration: 1,
           },
         },
       },
       particles: {
         color: {
-          value: "#1032de",
+          value: "#de102b",
         },
         links: {
-          color: "#3b95b5",
+          color: "#b53b74",
           distance: 150,
           enable: true,
           opacity: 0.5,
@@ -61,18 +61,18 @@ const BackgroundAnimation = ({ children }) => {
           outModes: {
             default: "bounce",
           },
-          random: false,
-          speed: 6,
-          straight: false,
+          random: true,
+          speed: 3,
+          straight: true,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 90,
+          value: 100,
         },
         opacity: {
-          value: 0.5,
+          value: 0.7,
         },
         shape: {
           type: "circle",
