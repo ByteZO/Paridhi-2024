@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 import Navbar from "./Components/NavBar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import BackgroundAnimation from "./Components/BackGroundAnimation/BackgroundAnimation";
