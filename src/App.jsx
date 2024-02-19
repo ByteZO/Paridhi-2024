@@ -1,28 +1,35 @@
 import React from "react";
-import styled from "styled-components";
-import Navbar from "./Components/NavBar/Navbar";
+import Layout from "./Layout/Layout";
 import Hero from "./Components/Hero/Hero";
-import BackgroundAnimation from "./Components/BackGroundAnimation/BackgroundAnimation";
+import Events from "./Components/Events/Events";
+import WorkShop from "./Components/WorkShop/WorkShop";
+import OurTeam from "./Components/OurTeam/OurTeam";
+import Sponsors from "./Components/Sponsors/Sponsors";
+import PrePredhiEvents from "./Components/PreParedhiEvents/PrePredhiEvents";
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
 
-const StyledContainer = styled.div`
-  background-image: url(${"https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"});
-
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
-`;
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+      <Route path="" element={<Hero />} />
+      <Route path="events" element={<Events />} />
+      <Route path="workshop" element={<WorkShop />} />
+      <Route path="our_team" element={<OurTeam />} />
+      <Route path="sponsors" element={<Sponsors />} />
+      <Route path="pre_paredhi_events" element={<PrePredhiEvents />} />
+    </Route>
+  )
+);
 
 export default function App() {
   return (
     <>
-      <StyledContainer>
-        <Navbar />
-        <Hero />
-        <div>
-          <BackgroundAnimation />
-        </div>
-      </StyledContainer>
+      <RouterProvider router={router} />
     </>
   );
 }

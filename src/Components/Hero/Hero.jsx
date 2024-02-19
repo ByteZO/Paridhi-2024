@@ -9,8 +9,8 @@ import {
   HeroContainer,
   CountText,
   DrippingDigit,
+  StyledContainer
 } from "./Hero.styled";
-
 
 const CountdownTimer = ({ targetDate }) => {
   const calculateTimeLeft = () => {
@@ -56,13 +56,10 @@ const CountdownTimer = ({ targetDate }) => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
-
-  
-
   return (
     <CountdownContainer>
       <CountdownItem>
-        <DrippingDigit >{timeLeft.days}</DrippingDigit>
+        <DrippingDigit>{timeLeft.days}</DrippingDigit>
         <CountText>Days</CountText>
       </CountdownItem>
 
@@ -77,7 +74,7 @@ const CountdownTimer = ({ targetDate }) => {
       </CountdownItem>
 
       <CountdownItem>
-        <DrippingDigit >{timeLeft.seconds}</DrippingDigit>
+        <DrippingDigit>{timeLeft.seconds}</DrippingDigit>
         <CountText>Seconds</CountText>
       </CountdownItem>
     </CountdownContainer>
@@ -89,17 +86,19 @@ const Hero = () => {
 
   return (
     <>
-      <HeroMain>
-        <HeroContainer>
-          <Title>Paridhi</Title>
-          <HeroText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-            dolores iste id deleniti esse, <br />
-            odit tenetur repudiandae voluptate
-          </HeroText>
-          <CountdownTimer targetDate={targetDate} />
-        </HeroContainer>
-      </HeroMain>
+      <StyledContainer>
+        <HeroMain>
+          <HeroContainer>
+            <Title>Paridhi</Title>
+            <HeroText>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+              dolores iste id deleniti esse, <br />
+              odit tenetur repudiandae voluptate
+            </HeroText>
+            <CountdownTimer targetDate={targetDate} />
+          </HeroContainer>
+        </HeroMain>
+      </StyledContainer>
     </>
   );
 };
