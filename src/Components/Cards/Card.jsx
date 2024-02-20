@@ -28,7 +28,6 @@ const Card = ({ ImageLink, TitleText, Description }) => {
    
         <Main ref={tiltRef}>
           <ImageBox $ImageLink={ImageLink}></ImageBox>
-
           <Title>{TitleText}</Title>
           <SubText>{Description}</SubText>
         </Main>
