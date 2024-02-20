@@ -1,17 +1,24 @@
 import React from "react";
 import Layout from "./Layout/Layout";
 import Hero from "./Components/Hero/Hero";
+import Card from "./Components/Cards/Card";
 import Events from "./Components/Events/Events";
 import WorkShop from "./Components/WorkShop/WorkShop";
 import OurTeam from "./Components/OurTeam/OurTeam";
 import Sponsors from "./Components/Sponsors/Sponsors";
 import PrePredhiEvents from "./Components/PreParedhiEvents/PrePredhiEvents";
+
 import {
   Route,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+
+// example card `
+{
+  /* <Card TitleText="yoeoe" Description="sdfsdfasdf asdfa sdf asdf sadf "  ImageLink="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" /> */
+}
 
 const router = createBrowserRouter(
   createRoutesFromElements(
