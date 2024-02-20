@@ -8,7 +8,6 @@ const Layout = () => {
   return (
     <>
       <Navbar/>
-      
       <Outlet />
       <div>
         <BackgroundAnimation />
