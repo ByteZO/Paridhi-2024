@@ -117,4 +117,5 @@ export const NavLinkName = styled(NavLink)`
   text-decoration: none;
   font-weight: bolder;
   letter-spacing: 2px;
+  color: wheat ;
 `;
