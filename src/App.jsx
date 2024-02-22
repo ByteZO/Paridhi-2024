@@ -26,7 +26,7 @@ import {
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path="/" element ={<Layout />}>
       <Route path="" element={<Hero />} />
       <Route path="events" element={<Events />} />
       <Route path="workshop" element={<WorkShop />} />
