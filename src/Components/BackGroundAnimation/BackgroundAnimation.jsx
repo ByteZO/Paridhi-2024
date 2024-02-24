@@ -50,7 +50,7 @@ const BackgroundAnimation = ({ children }) => {
             quantity: 4,
           },
           repulse: {
-            distance: 200,
+            distance: 100,
             duration: 1,
           },
         },

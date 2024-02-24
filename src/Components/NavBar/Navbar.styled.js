@@ -41,11 +41,11 @@ export const Logo = styled.div`
 `;
 
 export const MenuBtn = styled.label`
-  color: black;
+  color: white;
   cursor: pointer;
   display: none;
 
-  @media (max-width: 600px) {
+  @media (max-width: 1100px) {
     display: block;
   }
 `;
@@ -56,7 +56,7 @@ export const NavList = styled.ul`
   padding: 0;
   margin: 0;
 
-  @media (max-width: 600px) {
+  @media (max-width: 1100px) {
     position: fixed;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -64,7 +64,7 @@ export const NavList = styled.ul`
     right: ${({ $clicked }) => ($clicked ? "0" : "-100vw")};
 
     background: black;
-    height: 60vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -98,7 +98,7 @@ export const NavItem = styled.li`
     animation: ${underlineAnimation} 0.4s ease-out;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 1100px) {
     margin: 40px 0;
     font-size: larger;
     font-weight: 900;
