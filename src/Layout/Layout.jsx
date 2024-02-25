@@ -9,9 +9,9 @@ const Layout = () => {
     <>
       <Navbar/>
       <Outlet />
-      <div>
+      {/* <div>
         <BackgroundAnimation />
-      </div>
+      </div> */}
     </>
   );
 };

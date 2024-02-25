@@ -9,7 +9,7 @@ import {
   HeroContainer,
   CountText,
   DrippingDigit,
-  StyledContainer
+  StyledContainer,
 } from "./Hero.styled";
 
 const CountdownTimer = ({ targetDate }) => {

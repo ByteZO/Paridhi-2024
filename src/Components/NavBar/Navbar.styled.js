@@ -110,7 +110,7 @@ export const NavItem = styled.li`
     }
   }
 
-  color: black;
+  color: white;
 `;
 
 export const NavLinkName = styled(NavLink)`
