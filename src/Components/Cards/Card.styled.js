@@ -2,16 +2,14 @@ import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
 export const StyledContainer = styled.div`
-
-  overflow: hidden;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 400px;
+  width: 300px;
+  cursor: pointer;
+  margin: 20px;
 `;
 
-export const Main = styled.div`
-  z-index: 9;
+export const Main = styled(Link)`
+  z-index: -1;
   height: 400px;
   width: 300px;
   border-radius: 10%;
@@ -23,6 +21,7 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
 `;
 
 export const ImageBox = styled.div`
@@ -98,20 +97,20 @@ export const GlassButton = styled(Link)`
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
   letter-spacing: 2px;
-  cursor: pointer;
+  
   text-transform: uppercase;
   align-items: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   animation: ${glitchAnimation} 0.1s infinite alternate,
-    ${pulseAnimation} 2s infinite alternate; 
+    ${pulseAnimation} 2s infinite alternate;
 
   :hover {
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-5px) translateZ(10px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
-    animation: none; 
+    animation: none;
   }
 
   ::before {

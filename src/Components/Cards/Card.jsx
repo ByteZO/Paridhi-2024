@@ -24,11 +24,10 @@ const Card = ({ ImageLink, TitleText, Description, link }) => {
     <>
       <StyledContainer>
         <Tilt>
-          <Main>
+          <Main to={link}>
             <ImageBox $ImageLink={ImageLink}></ImageBox>
             <Title>{TitleText}</Title>
             <SubText>{Description}</SubText>
-            <GlassButton to={link}>Events</GlassButton>
           </Main>
         </Tilt>
       </StyledContainer>
