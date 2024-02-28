@@ -19,9 +19,11 @@ const Navbar = () => {
   return (
     <StyledContainer>
       <NavbarContainer>
-        <Logo>
-          Paridhi
+        <Logo to="/">
+         Paridhi
         </Logo>
+          
+        
 
         <MenuBtn onClick={handleClick}>
           <i className="fas fa-bars"></i>

@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const Main = styled.section`
-  height: 100vh;
-  width: 100vw;
+  height: 90vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: url("https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 `;
 export const Banner = styled.section`
-  height: 50%;
+  height: 55%;
   width: 80%;
   border: 2px solid black;
   padding: 10px;
@@ -61,7 +61,7 @@ export const Description = styled.h5`
 
 export const RegisterBtn = styled.button`
   display: inline-block;
-  padding: 1.5em 3em;
+  padding: .9em 3em;
   background-image: linear-gradient(
     -45deg,
     rgba(9, 28, 60, 1) 0%,
@@ -74,5 +74,6 @@ export const RegisterBtn = styled.button`
   letter-spacing: 0.2em;
   border-radius: 10em;
   color: white;
-  width: 60%;
+  width: 50%;
+
 `;

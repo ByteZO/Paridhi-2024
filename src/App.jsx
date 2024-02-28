@@ -33,8 +33,8 @@ const router = createBrowserRouter(
 
 export default function App() {
   return (
-    <>
+    <div className="main">
       <RouterProvider router={router} />
-    </>
+    </div>
   );
 }

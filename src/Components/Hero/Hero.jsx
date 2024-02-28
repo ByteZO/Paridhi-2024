@@ -86,7 +86,7 @@ const Hero = () => {
 
   return (
     <>
-      <StyledContainer>
+      <StyledContainer>  
         <HeroMain>
           <HeroContainer>
             <Title>Paridhi</Title>

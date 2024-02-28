@@ -54,7 +54,6 @@ const Events = () => {
     <>
       <StyledContainer>
         {eventDataArray.map((data) => {
-          console.log(data.link);
           return (
             <Card
               key={data.TitleText}

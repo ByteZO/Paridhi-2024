@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const underlineAnimation = keyframes`
   from {
@@ -18,29 +18,39 @@ export const StyledContainer = styled.div`
 
   background-size: cover;
   background-position: center;
-  height: 10vh;
-  width: 100vw;
+  height: 10%;
+  width: 100%;
 `;
 
 export const NavbarContainer = styled.nav`
-  background-image: url(${"https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"});
-  
-  z-index: 6;
-  position: fixed;
+  background-color: transparent;
+
   padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 100%;
   width: 100vw;
   color: black;
 `;
 
-export const Logo = styled.div`
-  color: white;
+export const Logo = styled(Link)`
+text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
+  cursor: pointer;
+  background-size:contain;
+  color: aliceblue;
+ 
 `;
+export const  SubLogo = styled.img`
+
+background-image: url("http://msitparidhi.in/assets/megalogowithstroke-07da01ae.png");
+height: 100%;
+width: 100%;
+background-size: contain;
+
+` 
 
 export const MenuBtn = styled.label`
   color: white;
@@ -119,5 +129,5 @@ export const NavLinkName = styled(NavLink)`
   text-decoration: none;
   font-weight: bolder;
   letter-spacing: 2px;
-  color: wheat;
+  color: wheat ;
 `;
