@@ -4,11 +4,8 @@ import {
   ImageBox,
   Title,
   SubText,
-  GlassButton,
   StyledContainer,
 } from "./Card.styled";
-import VanillaTilt from "vanilla-tilt";
-import { Link } from "react-router-dom";
 import Tilt from "react-parallax-tilt";
 
 {
@@ -23,13 +20,13 @@ const Card = ({ ImageLink, TitleText, Description, link }) => {
   return (
     <>
       <StyledContainer>
-        <Tilt>
+ 
           <Main to={link}>
             <ImageBox $ImageLink={ImageLink}></ImageBox>
             <Title>{TitleText}</Title>
             <SubText>{Description}</SubText>
           </Main>
-        </Tilt>
+      
       </StyledContainer>
     </>
   );
