@@ -30,28 +30,22 @@ import {
 
 const InfoBanner = ({ title, fee, teamSize, Descriptions, Image }) => {
   const openGoogleInNewTab = () => {
-    window.open("https://www.google.com", "_blank");
+    window.open("https://www.google.com");
   };
   return (
     <>
       <Main>
         <Banner>
-          <BannerImage></BannerImage>
+          <BannerImage $Image={Image}></BannerImage>
           <BannerInfo>
-            <Title>coding crusade</Title>
-            <hr />
-            <RegFee>Registration Fee: 150</RegFee>
-            <TeamSize>Team Size: 2</TeamSize>
-            <hr />
+            <Title>{title}</Title>
+  
+            <RegFee>Registration Fee: {fee}</RegFee>
+            <TeamSize>Team Size: {teamSize}</TeamSize>
+
             <Description>
               {/* {Descriptions} */}
-              Open for all years. Competitive Programming Contest. <br />
-              1. A participant can participate in the preliminary round only
-              once. <br />
-              2. Top participants from the preliminary rounds will advance to
-              the final round. <br />
-              3. The participant with the highest score and least time will be
-              awarded <br /> 4. This will be a Proctored Competition.
+              
             </Description>
 
             <RegisterBtn onClick={openGoogleInNewTab}>Rgister Now</RegisterBtn>
