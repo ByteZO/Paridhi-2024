@@ -1,8 +1,13 @@
 import React from 'react'
 
+import Design from '../Design/Design'
+
 const OurTeam = () => {
   return (
-    <div>OurTeam</div>
+    <>
+    
+   <Design/>
+    </>
   )
 }
 

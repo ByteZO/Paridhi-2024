@@ -12,38 +12,51 @@ export const Banner = styled.section`
   height: 55%;
   width: 80%;
   border: 2px solid black;
-  padding: 10px;
+
   display: flex;
   align-items: center;
-  border-radius: 10px;
 
   @media (max-width: 1100px) {
     flex-direction: column;
+    height: 95%;
+    width: 80%;
   }
+  border: 2px solid white;
 `;
 export const BannerImage = styled.div`
   border: 2px solid white;
-  background-image: url("https://assets.thehansindia.com/h-upload/2021/07/31/1092805-tech.jpg?width=500&height=300");
+  background-image: url(${({ $Image }) => $Image});
   background-size: contain;
-  object-fit: cover;
   background-position: center;
   height: 100%;
-  width: 30%;
+  width: 40%;
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    height: 20%;
+    width: 100%;
+  }
 `;
 export const BannerInfo = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   height: 100%;
-  width: 80%;
+  width: 100%;
+  padding: 20px;
   border: 2px solid white;
-  padding: 10px;
+  @media (max-width: 1100px) {
+    height: 80%;
+  }
 `;
 export const Title = styled.h1`
   color: white;
-  font-weight: bolder;
   font-size: 50px;
+  text-align: center;
+  @media (max-width: 1100px) {
+    font-size: 50px;
+  }
 `;
 export const RegFee = styled.h2`
   font-weight: bolder;
@@ -57,15 +70,21 @@ export const TeamSize = styled.h3`
 `;
 export const Description = styled.h5`
   color: white;
+  font-size: larger;
+  /* margin-bottom: 20px; */
+  @media (max-width: 1100px) {
+    font-size: large;
+    margin-bottom: 0;
+  }
 `;
 
 export const RegisterBtn = styled.button`
   display: inline-block;
-  padding: .9em 3em;
+  padding: 0.9em 3em;
   background-image: linear-gradient(
     -45deg,
     rgba(9, 28, 60, 1) 0%,
-    rgba(67, 46, 103, 1) 100%
+    rgba(67, 46, 143, 1) 100%
   );
   text-decoration: none;
   font-weight: 900;
@@ -76,4 +95,12 @@ export const RegisterBtn = styled.button`
   color: white;
   width: 50%;
 
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    height: 40%;
+    width: 80%;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    padding: 0.56em 3em;
+  }
 `;
