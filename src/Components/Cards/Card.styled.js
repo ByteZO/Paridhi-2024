@@ -53,7 +53,7 @@ export const Title = styled.div`
   width: 100%;
   font-size: x-large;
   padding: 10%;
-  color: wheat;
+  color: white  ;
   transform-style: preserve-3d;
   transform: translateZ(200px);
   text-align: center;
@@ -61,7 +61,7 @@ export const Title = styled.div`
 export const SubText = styled.div`
   height: 25%;
   width: 100%;
-  color: wheat;
+  color: white;
   padding: 2%;
   text-align: center;
 `;

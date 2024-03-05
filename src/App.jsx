@@ -6,8 +6,8 @@ import WorkShop from "./Components/WorkShop/WorkShop";
 import OurTeam from "./Components/OurTeam/OurTeam";
 import Sponsors from "./Components/Sponsors/Sponsors";
 import PrePredhiEvents from "./Components/PreParedhiEvents/PrePredhiEvents";
-import Coding from "./Components/Events/Coding/Coding";
-import InfoBanner from "./Components/InfoBanner/InfoBanner";
+import { Registration } from "./Components/Registration/Registration";
+import DomainEvents from "./Components/Events/DomainEvents/DomainEvents";
 
 import {
   Route,
@@ -25,8 +25,11 @@ const router = createBrowserRouter(
       <Route path="our_team" element={<OurTeam />} />
       <Route path="sponsors" element={<Sponsors />} />
       <Route path="pre_paredhi_events" element={<PrePredhiEvents />} />
-      <Route path="events/coding" element={<Coding />} />
-      <Route path="events/coding/web_dev" element={<InfoBanner />} />
+      <Route path="events/:Domain" element={<DomainEvents />} />
+      <Route
+        path="events/:Domain/:EvnetRegistration"
+        element={<Registration />}
+      />
     </Route>
   )
 );

@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 
-
-
 export const Main = styled.div`
-  z-index: 1;
-  height: 400px;
+  height: ${({ $height }) => $height}px;
   width: 300px;
   border-radius: 10%;
   padding: 10px;
@@ -18,14 +16,15 @@ export const Main = styled.div`
   align-items: center;
   text-decoration: none;
   margin: 40px;
+  transition: height 0.2s ease;
   @media (max-width: 600px) {
-    height: 331px;
+    height: ${({ $clicked }) => $clicked}px;
     width: 225px;
   }
 `;
 
 export const ImageBox = styled.div`
-  height: 50%;
+  height: 200px;
   width: 100%;
   border-top-right-radius: 11%;
   border-top-left-radius: 11%;
@@ -39,35 +38,32 @@ export const ImageBox = styled.div`
 export const Title = styled.div`
   display: grid;
   place-content: center;
-  height: 15%;
+  height: 60px;
   width: 100%;
   font-size: x-large;
   padding: 2%;
-  color: wheat;
+  color: white;
   transform-style: preserve-3d;
   transform: translateZ(200px);
   text-align: center;
 `;
 
-export const SubBox = styled.section`
-  height: 20%;
-  width: 100%;
-  display: flex;
-  align-items: end;
-`;
 export const SubText = styled.p`
+  cursor: pointer;
   width: 100%;
-  color: wheat;
-  /* padding: 2%; */
+  color: white;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+
+  -webkit-line-clamp: ${({ $height }) => $height};
+  transition: -webkit-line-clamp 0.3s ease;
+
+  /* margin-top: 100px; */
   overflow: hidden;
   -webkit-box-orient: vertical;
   text-align: center;
-`;
-export const SeeMore = styled.span`
-  width: 20px;
-  font-size: 20px;
+  @media (max-width: 600px) {
+    -webkit-line-clamp: ${({ $clicked }) => $clicked};
+  }
 `;
 
 export const BtnBox = styled.section`
@@ -77,7 +73,7 @@ export const BtnBox = styled.section`
   font-weight: 500;
 
   /* margin-top: 70px; */
-  height: 17%;
+  height: 80px;
   width: 100%;
   display: flex;
   align-items: center;

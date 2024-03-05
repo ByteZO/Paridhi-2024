@@ -1,14 +1,15 @@
-import React from 'react'
-
-import Design from '../Design/Design'
+import React from "react";
+import {See} from "./OurTeam.styled"
+import WaterDropGrid from "../Design/Design";
 
 const OurTeam = () => {
   return (
     <>
-    
-   <Design/>
-    </>
-  )
-}
+      <See>
+        <WaterDropGrid />
+      </See>
+    </> 
+  );
+};
 
-export default OurTeam
+export default OurTeam;
