@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { Link, NavLink } from "react-router-dom";
-
+import megalogo from "../../assets/Images/megalogo.png";
 const underlineAnimation = keyframes`
   from {
     width: 0;
@@ -9,13 +9,12 @@ const underlineAnimation = keyframes`
 
   to {
     width: 50%;
-    background-color: red;
+
   }
 `;
 
 export const StyledContainer = styled.div`
-  background-image: url(${"https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"});
-
+  background-image: url("https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center;
   height: 10%;
@@ -24,7 +23,7 @@ export const StyledContainer = styled.div`
 
 export const NavbarContainer = styled.nav`
   background-color: transparent;
-
+  z-index: 9;
   padding: 0 50px;
   display: flex;
   justify-content: space-between;
@@ -35,22 +34,21 @@ export const NavbarContainer = styled.nav`
 `;
 
 export const Logo = styled(Link)`
-text-decoration: none;
+  text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
-  background-size:contain;
+  background-size: contain;
   color: aliceblue;
- 
+  height: 10vh;
+  width: 10vh;
 `;
-export const  SubLogo = styled.img`
-
-background-image: url("http://msitparidhi.in/assets/megalogowithstroke-07da01ae.png");
-height: 100%;
-width: 100%;
-background-size: contain;
-
-` 
+export const SubLogo = styled.img`
+  background-image: url(megalogo);
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+`;
 
 export const MenuBtn = styled.label`
   color: white;
@@ -59,6 +57,7 @@ export const MenuBtn = styled.label`
 
   @media (max-width: 1100px) {
     display: block;
+    color: white;
   }
 `;
 
@@ -103,7 +102,7 @@ export const NavItem = styled.li`
     position: absolute;
     left: 0;
     bottom: -5px;
-    width: 50%;
+    width: 50% ;
     height: 2px;
     background-color: red;
     font-size: 30px;
@@ -116,9 +115,10 @@ export const NavItem = styled.li`
     font-weight: 900;
 
     &:hover {
-      transform: scale(1.2);
+      /* transform: scale(1.2); */
       margin-left: 15px;
       margin-right: 15px;
+   
     }
   }
 
@@ -129,5 +129,5 @@ export const NavLinkName = styled(NavLink)`
   text-decoration: none;
   font-weight: bolder;
   letter-spacing: 2px;
-  color: wheat ;
+  color: white;
 `;

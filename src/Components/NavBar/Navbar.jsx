@@ -7,7 +7,9 @@ import {
   NavItem,
   NavLinkName,
   StyledContainer,
+  SubLogo,
 } from "./Navbar.styled";
+import megalogo from "../../assets/Images/megalogo.png";
 
 const Navbar = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -20,34 +22,88 @@ const Navbar = () => {
     <StyledContainer>
       <NavbarContainer>
         <Logo to="/">
-         Paridhi
+          <SubLogo src={megalogo} />
         </Logo>
-          
-        
-
         <MenuBtn onClick={handleClick}>
-          <i className="fas fa-bars"></i>
+          {isClicked ? (
+            <i className="ri-close-large-fill"></i>
+          ) : (
+            <i className="ri-menu-line"></i>
+          )}
         </MenuBtn>
         <NavList $clicked={isClicked}>
           <NavItem>
-            <NavLinkName to="events">Events</NavLinkName>
+            <NavLinkName
+              style={({ isActive }) => ({
+                textShadow: isActive ? "4px 4px 5px #ff0000" : "",
+                color: isActive ? "#ff0000" : "",
+                borderBottom: isActive ? "#ff0000" : "",
+              })}
+              to="events"
+              onClick={handleClick}
+            >
+              Events
+            </NavLinkName>
           </NavItem>
           <NavItem>
-            <NavLinkName to="workshop">Workshop</NavLinkName>
+            <NavLinkName
+              style={({ isActive }) => ({
+                textShadow: isActive ? "4px 4px 5px #ff0000" : "",
+                color: isActive ? "#ff0000" : "",
+              })}
+              to="workshop"
+              onClick={handleClick}
+            >
+              Workshop
+            </NavLinkName>
           </NavItem>
           <NavItem>
-            <NavLinkName to="pre_paredhi_events">
+            <NavLinkName
+              style={({ isActive }) => ({
+                textShadow: isActive ? "4px 4px 5px #ff0000" : "",
+                color: isActive ? "#ff0000" : "",
+              })}
+              to="pre_paredhi_events"
+              onClick={handleClick}
+            >
               Pre-Paredhi-Events
             </NavLinkName>
           </NavItem>
           <NavItem>
-            <NavLinkName to="sponsors">Sponsors</NavLinkName>
+            <NavLinkName
+              style={({ isActive }) => ({
+                textShadow: isActive ? "4px 4px 5px #ff0000" : "",
+                color: isActive ? "#ff0000" : "",
+              })}
+              to="sponsors"
+              onClick={handleClick}
+            >
+              Sponsors
+            </NavLinkName>
           </NavItem>
           <NavItem>
-            <NavLinkName to="our_team">Our Team</NavLinkName>
+            <NavLinkName
+              style={({ isActive }) => ({
+                textShadow: isActive ? "4px 4px 5px #ff0000" : "",
+                color: isActive ? "#ff0000" : "",
+              })}
+              to="our_team"
+              onClick={handleClick}
+            >
+              Our Team
+            </NavLinkName>
           </NavItem>
           <NavItem>
-            <NavLinkName to="">Sign Up</NavLinkName>
+            <NavLinkName
+              style={({ isActive }) => ({
+                textShadow: isActive ? "4px 4px 5px #ff0000" : "",
+                color: isActive ? "#ff0000" : "",
+              })}
+              to=""
+              onClick={handleClick}
+            >
+              Sign Up
+            </NavLinkName>
           </NavItem>
         </NavList>
       </NavbarContainer>
