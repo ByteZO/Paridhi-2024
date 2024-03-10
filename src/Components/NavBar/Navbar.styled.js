@@ -87,6 +87,9 @@ export const NavItem = styled.li`
   transition: transform 0.3s ease, margin 0.3s ease;
   text-decoration: none;
 
+
+  
+
   &:hover {
     transform: scale(1.2);
     margin-left: 15px;
