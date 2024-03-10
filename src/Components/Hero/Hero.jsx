@@ -95,7 +95,7 @@ const CountdownTimer = ({ targetDate }) => {
 };
 
 const Hero = () => {
-  const targetDate = new Date("2024-03-06T23:59:59");
+  const targetDate = new Date("2024-04-06T23:59:59");
 
   const baffleRef = useRef(null);
 

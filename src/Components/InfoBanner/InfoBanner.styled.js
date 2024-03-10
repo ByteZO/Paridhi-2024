@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Banner = styled.section`
   height: 70%;
   width: 90%;
-  border: 2px solid black;
 
   display: flex;
   align-items: center;
@@ -14,12 +13,13 @@ export const Banner = styled.section`
     width: 80%;
   }
   border: 2px solid white;
+  border-radius: 30px;
 `;
 export const BannerImage = styled.div`
-  border: 2px solid white;
   background-image: url(${({ $Image }) => $Image});
   background-size: contain;
-
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
   background-position: center;
   height: 100%;
   width: 40%;
@@ -27,6 +27,8 @@ export const BannerImage = styled.div`
     flex-direction: column;
     height: 30%;
     width: 100%;
+    border-bottom-left-radius: 0px;
+  border-top-right-radius: 30px;
   }
 `;
 export const BannerInfo = styled.section`
@@ -38,9 +40,16 @@ export const BannerInfo = styled.section`
   height: 100%;
   width: 100%;
   padding: 20px 20px 5px 20px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
   border: 2px solid white;
   @media (max-width: 600px) {
     height: 80%;
+    border-bottom-right-radius: 30px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 30px;
+
+ 
   }
 `;
 export const Title = styled.h1`

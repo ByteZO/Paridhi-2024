@@ -69,7 +69,6 @@ export const NavList = styled.ul`
     overflow-y: hidden;
     top: 10vh;
     right: ${({ $clicked }) => ($clicked ? "0" : "-100vw")};
-
     background: black;
     height: 90vh;
     width: 100%;
@@ -95,7 +94,7 @@ export const NavItem = styled.li`
   }
 
   @media (max-width: 1100px) {
-    margin: 40px 0;
+    margin: 33px 0;
     font-size: larger;
     font-weight: 900;
 
