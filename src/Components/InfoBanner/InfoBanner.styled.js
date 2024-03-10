@@ -37,7 +37,7 @@ export const BannerInfo = styled.section`
   gap: 10px;
   height: 100%;
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 5px 20px;
   border: 2px solid white;
   @media (max-width: 600px) {
     height: 80%;
@@ -70,18 +70,34 @@ export const TeamSize = styled.h3`
 export const Description = styled.h5`
   color: white;
   font-size: larger;
-  /* margin-bottom: 20px; */
+  margin-bottom: 10px;
   @media (max-width: 600px) {
-    font-size: large;
-    margin-bottom: 0;
+    font-size: small;
+    margin-bottom: 10px;
   }
 `;
 
-export const RegisterBtn = styled.button`
+export const ButtonSection = styled.div`
   height: 10%;
-  width: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+`;
+export const RegisterBtn = styled.button`
+  height: 100%;
+  width: 40%;
   font-family: inherit;
   background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   border-radius: 10px;
   background-color: #11172b;
@@ -93,13 +109,14 @@ export const RegisterBtn = styled.button`
   font: inherit;
   cursor: pointer;
   outline: inherit;
+  text-align: center;
 
   @media (max-width: 600px) {
     flex-direction: column;
-    height: 10%;
+    height: 72%;
     width: 80%;
     font-size: 15px;
     letter-spacing: 0.1em;
-    padding: 0.56em 3em;
+    padding: 0.56em;
   }
 `;

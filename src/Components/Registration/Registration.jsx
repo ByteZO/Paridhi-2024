@@ -58,6 +58,7 @@ export const Registration = () => {
             Image={data.Image}
             title={data.title}
             fee={data.fee}
+            teamSize={data.teamSize}
             Descriptions={data.Descriptions}
           />
         )}

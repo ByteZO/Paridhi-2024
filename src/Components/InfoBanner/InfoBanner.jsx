@@ -8,6 +8,7 @@ import {
   TeamSize,
   Description,
   RegisterBtn,
+  ButtonSection,
 } from "./InfoBanner.styled";
 
 // Example InfoBanner
@@ -54,7 +55,10 @@ import {
 }
 
 const InfoBanner = ({ title, fee, teamSize, Descriptions, Image }) => {
-  const openGoogleInNewTab = () => {
+  const openRegistration = () => {
+    window.open("https://www.google.com");
+  };
+  const openRules = () => {
     window.open("https://www.google.com");
   };
 
@@ -67,7 +71,10 @@ const InfoBanner = ({ title, fee, teamSize, Descriptions, Image }) => {
           <RegFee>Registration Fee: {fee}</RegFee>
           <TeamSize>Team Size: {teamSize}</TeamSize>
           <Description>{Descriptions}</Description>
-          <RegisterBtn onClick={openGoogleInNewTab}>Rgister Now</RegisterBtn>
+          <ButtonSection>
+            <RegisterBtn onClick={openRegistration}>Rgister Now</RegisterBtn>
+            <RegisterBtn onClick={openRules}>Rules</RegisterBtn>
+          </ButtonSection>
         </BannerInfo>
       </Banner>
     </>

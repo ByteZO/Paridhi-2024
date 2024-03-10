@@ -1,13 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import baffle from "baffle";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
 import {
   HeroMain,
   CountdownContainer,
   CountdownItem,
   Title,
+  Typewriter,
   HeroText,
   HeroContainer,
   CountText,
+  Footer,
+  Middle,
+  Btn,
+  FontAwesomeIconStyled,
   DrippingDigit,
   StyledContainer,
 } from "./Hero.styled";
@@ -82,21 +95,56 @@ const CountdownTimer = ({ targetDate }) => {
 };
 
 const Hero = () => {
-  const targetDate = new Date("2024-03-01T23:59:59");
+  const targetDate = new Date("2024-03-06T23:59:59");
+
+  const baffleRef = useRef(null);
+
+  useEffect(() => {
+    const text = baffle(baffleRef.current);
+    text.set({
+      characters: "!/|~#.^+*$#%nwf",
+      speed: 300,
+    });
+    text.start();
+    text.reveal(2000);
+
+    // Clean up baffle instance on unmount
+    return () => {
+      text.stop();
+    };
+  }, []);
 
   return (
     <>
-      <StyledContainer>  
+      <StyledContainer>
         <HeroMain>
           <HeroContainer>
-            <Title>Paridhi</Title>
-            <HeroText>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-              dolores iste id deleniti esse, <br />
-              odit tenetur repudiandae voluptate
-            </HeroText>
+            <Title>
+              <Typewriter className="baffle" ref={baffleRef}>
+                Paridhi 2024
+              </Typewriter>
+            </Title>
+            <HeroText>Starts in</HeroText>
+
             <CountdownTimer targetDate={targetDate} />
           </HeroContainer>
+
+          <Footer>
+            <Middle>
+              <Btn href="#">
+                <FontAwesomeIconStyled icon={faFacebook} />
+              </Btn>
+              <Btn href="#">
+                <FontAwesomeIconStyled icon={faInstagram} />
+              </Btn>
+              <Btn href="#">
+                <FontAwesomeIconStyled icon={faLinkedin} />
+              </Btn>
+              <Btn href="#">
+                <FontAwesomeIconStyled icon={faYoutube} />
+              </Btn>
+            </Middle>
+          </Footer>
         </HeroMain>
       </StyledContainer>
     </>

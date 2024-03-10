@@ -1,14 +1,11 @@
 import React from "react";
-import {See} from "./OurTeam.styled"
-import WaterDropGrid from "../Design/Design";
+import { Main } from "./OurTeam.styled";
 
 const OurTeam = () => {
   return (
     <>
-      <See>
-        <WaterDropGrid />
-      </See>
-    </> 
+      <Main>OurTeam</Main>
+    </>
   );
 };
 

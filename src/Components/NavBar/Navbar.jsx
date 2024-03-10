@@ -9,7 +9,7 @@ import {
   StyledContainer,
   SubLogo,
 } from "./Navbar.styled";
-import megalogo from "../../assets/Images/megalogo.png";
+import megalogo from "../../assets/Images/megaLogo.png";
 
 const Navbar = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -66,7 +66,7 @@ const Navbar = () => {
               to="pre_paredhi_events"
               onClick={handleClick}
             >
-              Pre-Paredhi-Events
+              PreEvents-Paredhi
             </NavLinkName>
           </NavItem>
           <NavItem>
