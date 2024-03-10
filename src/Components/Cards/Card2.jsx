@@ -6,7 +6,6 @@ export const Card2 = ({ ImageLink, TitleText, Description, link }) => {
 
   const handleClick = () => {
     setIsClicked(!isClicked);
-    console.log(isClicked);
   };
 
   const openNewTab = () => {
