@@ -28,7 +28,7 @@ export const BannerImage = styled.div`
     height: 30%;
     width: 100%;
     border-bottom-left-radius: 0px;
-  border-top-right-radius: 30px;
+    border-top-right-radius: 30px;
   }
 `;
 export const BannerInfo = styled.section`
@@ -36,28 +36,29 @@ export const BannerInfo = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  /* gap: 15px; */
   height: 100%;
   width: 100%;
-  padding: 20px 20px 5px 20px;
+  padding: 30px 30px 30px 30px;
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
   border: 2px solid white;
   @media (max-width: 600px) {
     height: 80%;
     border-bottom-right-radius: 30px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 30px;
-
- 
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 30px;
+    /* gap: 20px; */
   }
 `;
 export const Title = styled.h1`
   color: white;
   font-size: 50px;
   text-align: center;
+
   @media (max-width: 600px) {
-    font-size: 30px;
+    font-size: 25px;
   }
 `;
 export const RegFee = styled.h2`

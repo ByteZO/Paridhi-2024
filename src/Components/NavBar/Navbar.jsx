@@ -22,7 +22,7 @@ const Navbar = () => {
     <StyledContainer>
       <NavbarContainer>
         <Logo to="/">
-          <SubLogo src={megalogo} />
+          <SubLogo src={megalogo } />
         </Logo>
         <MenuBtn onClick={handleClick}>
           {isClicked ? (

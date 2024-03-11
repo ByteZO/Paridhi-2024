@@ -24,7 +24,7 @@ export const Registration = () => {
     MobileAppDevelopment: {
       Image:
         "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Mobile App Development Hackathon",
+      title: "Mobile App Development",
       teamSize: 4,
       fee: 250,
       Descriptions: `Open for all years. Mobile App Development Hackathon. <br />1. Participants must form teams of 4. <br />2. Participants will have 24 hours to develop a mobile app. <br />3. Judges will evaluate apps based on functionality, design, and innovation.`,

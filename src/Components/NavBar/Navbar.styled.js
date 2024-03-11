@@ -1,5 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { Link, NavLink } from "react-router-dom";
+import megalogo from "../../assets/Images/megaLogo.png";
+
 const underlineAnimation = keyframes`
   from {
     width: 0;
@@ -19,9 +21,8 @@ export const StyledContainer = styled.div`
 `;
 
 export const NavbarContainer = styled.nav`
-  background-color: transparent;
   z-index: 9;
-  padding: 0 50px 0 3px;
+  padding: 0 50px 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,12 +39,14 @@ export const Logo = styled(Link)`
   color: aliceblue;
   height: 10vh;
   width: 10vh;
+  
+ 
 `;
 export const SubLogo = styled.img`
-  background-image: url(megalogo);
+
   height: 100%;
   width: 100%;
-  background-size: contain;
+  background-size: cover;
 `;
 
 export const MenuBtn = styled.label`
