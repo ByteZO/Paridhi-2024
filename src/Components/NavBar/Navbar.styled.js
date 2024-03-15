@@ -18,6 +18,8 @@ export const StyledContainer = styled.div`
   background-position: center;
   height: 10vh;
   width: 100%;
+  position: fixed;
+  z-index: 2;
 `;
 
 export const NavbarContainer = styled.nav`
@@ -39,11 +41,8 @@ export const Logo = styled(Link)`
   color: aliceblue;
   height: 10vh;
   width: 10vh;
-  
- 
 `;
 export const SubLogo = styled.img`
-
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -89,9 +88,6 @@ export const NavItem = styled.li`
   position: relative;
   transition: transform 0.3s ease, margin 0.3s ease;
   text-decoration: none;
-
-
-  
 
   &:hover {
     transform: scale(1.2);
@@ -154,3 +150,5 @@ export const NavLinkName = styled(NavLink)`
     }
   }
 `;
+
+

@@ -22,7 +22,7 @@ const Navbar = () => {
     <StyledContainer>
       <NavbarContainer>
         <Logo to="/">
-          <SubLogo src={megalogo } />
+          <SubLogo src={megalogo} />
         </Logo>
         <MenuBtn onClick={handleClick}>
           {isClicked ? (
@@ -96,8 +96,8 @@ const Navbar = () => {
           <NavItem>
             <NavLinkName
               style={({ isActive }) => ({
-                textShadow: isActive ? "4px 4px 5px #ff0000" : "",
-                color: isActive ? "#ff0000" : "",
+                textShadow: "4px 4px 5px #ff0000",
+                color: "#ff0000",
               })}
               to=""
               onClick={handleClick}

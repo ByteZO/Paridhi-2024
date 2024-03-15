@@ -7,7 +7,7 @@ import {
   faLinkedin,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-
+ 
 import {
   HeroMain,
   CountdownContainer,
@@ -72,23 +72,27 @@ const CountdownTimer = ({ targetDate }) => {
   return (
     <CountdownContainer>
       <CountdownItem>
-        <DrippingDigit>{timeLeft.days}</DrippingDigit>
+        <DrippingDigit>{timeLeft.days}
         <CountText>Days</CountText>
+        </DrippingDigit>
       </CountdownItem>
 
       <CountdownItem>
-        <DrippingDigit>{timeLeft.hours}</DrippingDigit>
+        <DrippingDigit>{timeLeft.hours}
         <CountText>Hours</CountText>
+        </DrippingDigit>
       </CountdownItem>
 
       <CountdownItem>
-        <DrippingDigit>{timeLeft.minutes}</DrippingDigit>
+        <DrippingDigit>{timeLeft.minutes}
         <CountText>Minutes</CountText>
+        </DrippingDigit>
       </CountdownItem>
 
       <CountdownItem>
-        <DrippingDigit>{timeLeft.seconds}</DrippingDigit>
+        <DrippingDigit  > {timeLeft.seconds}
         <CountText>Seconds</CountText>
+        </DrippingDigit>
       </CountdownItem>
     </CountdownContainer>
   );

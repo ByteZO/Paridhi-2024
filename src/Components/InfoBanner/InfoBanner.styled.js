@@ -3,10 +3,8 @@ import styled from "styled-components";
 export const Banner = styled.section`
   height: 70%;
   width: 90%;
-
   display: flex;
   align-items: center;
-
   @media (max-width: 600px) {
     flex-direction: column;
     height: 95%;

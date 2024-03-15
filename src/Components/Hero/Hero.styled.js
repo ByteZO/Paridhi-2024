@@ -5,7 +5,7 @@ export const StyledContainer = styled.div`
   background-image: url(${"https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"});
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
 `;
 
@@ -26,7 +26,7 @@ export const HeroMain = styled.div`
 export const HeroContainer = styled.div`
   height: 80%;
   width: 100%;
-
+  margin-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +79,8 @@ const glitchAnimation = keyframes`
 `;
 
 export const HeroText = styled.div`
-  font-size: large;
+  font-size: 30px;
+  font-weight: bold;
   text-align: center;
   @media (max-width: 600px) {
     font-weight: 800;
@@ -162,29 +163,13 @@ export const CountdownItem = styled.div`
 
 export const CountText = styled.div`
   font-size: 15px;
-  font-weight: 300;
+  font-weight: bolder;
   @media (max-width: 600px) {
     font-size: 10px;
     font-weight: 800;
   }
 `;
 
-const dripAnimation = keyframes`
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  50% {
-    transform: translateY(20%);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-`;
 
 export const DrippingDigit = styled.div`
   background-color: black;
@@ -199,21 +184,25 @@ export const DrippingDigit = styled.div`
   border-width: 50px;
   box-sizing: border-box;
   box-shadow: 0 0.5rem 0.4rem 0.01rem hsl(70, 0%, 19%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const effect = keyframes`
   0% {
     left: -110%;
     top: 90%;
-    background: #54d6d6;
+    background: #9f9c9c;
   }
   50% {
  
-    background: #00f7ffc5;
+    background: #9f9c9c;
   }
   90% {
   
-    background: #00f7ffc5;
+    background: #9f9c9c;
   }
   100%{
   
@@ -248,8 +237,8 @@ export const Btn = styled.a`
   background-color: transparent;
   margin: 1rem;
   border-radius: 30%;
-  box-shadow: 0 5px 15px -5px #00000070;
-  color: #00ccff;
+  box-shadow: 0 5px 15px -5px #ffffff;
+  color: #fff;
   overflow: hidden;
   position: relative;
   text-decoration: none;

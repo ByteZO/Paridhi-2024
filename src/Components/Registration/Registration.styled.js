@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Main = styled.section`
-  height: 90vh;
+padding-top:10vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
