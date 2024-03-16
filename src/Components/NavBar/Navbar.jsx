@@ -98,6 +98,7 @@ const Navbar = () => {
               style={({ isActive }) => ({
                 textShadow: "4px 4px 5px #ff0000",
                 color: "#ff0000",
+                
               })}
               to=""
               onClick={handleClick}
