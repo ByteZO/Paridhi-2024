@@ -37,6 +37,18 @@ const Navbar = () => {
               style={({ isActive }) => ({
                 textShadow: isActive ? "4px 4px 5px #ff0000" : "",
                 color: isActive ? "#ff0000" : "",
+              })}
+              to="profile"
+              onClick={handleClick}
+            >
+              Profile
+            </NavLinkName>
+          </NavItem>
+          <NavItem>
+            <NavLinkName
+              style={({ isActive }) => ({
+                textShadow: isActive ? "4px 4px 5px #ff0000" : "",
+                color: isActive ? "#ff0000" : "",
                 borderBottom: isActive ? "#ff0000" : "",
               })}
               to="events"
@@ -98,7 +110,6 @@ const Navbar = () => {
               style={({ isActive }) => ({
                 textShadow: "4px 4px 5px #ff0000",
                 color: "#ff0000",
-                
               })}
               to=""
               onClick={handleClick}

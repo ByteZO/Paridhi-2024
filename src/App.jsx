@@ -15,6 +15,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import Profile from "./Components/Profile/Profile";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
       <Route path="sponsors" element={<Sponsors />} />
       <Route path="pre_paredhi_events" element={<PrePredhiEvents />} />
       <Route path="events/:Domain" element={<DomainEvents />} />
+      <Route path="profile" element={<Profile />} />
       <Route
         path="events/:Domain/:EvnetRegistration"
         element={<Registration />}

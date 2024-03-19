@@ -1,98 +1,34 @@
-<div class="glass-panel">
-  <h1>
-    <a
-      href="https://superdevresources.com/glassmorphism-ui-css/"
-      target="_blank"
-      >Glassmorphism CSS Panels and Buttons</a
-    >
-  </h1>
-  <p>
-    Glassmorphism is achieved using transparency and background blur to get a
-    frosted-glass like effect.
-  </p>
-  <div class="glass-toolbar">
-    <button class="glass-button">Glass Button</button>
-    <a
-      href="https://superdevresources.com/glassmorphism-ui-css/"
-      target="_blank"
-      class="glass-button"
-      >Glass Link Button</a
-    >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Example</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 2fr)); /* Adjust minmax values as needed */
+      gap: 10px; /* Adjust gap between items */
+    }
+
+    .item {
+      background-color: lightblue;
+      padding: 20px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+    <div class="item">Item 7</div>
+    <!-- Add more items as needed -->
   </div>
-</div>
-
-<style>
-  .glass-panel {
-    color: #fff;
-    margin: 40px auto;
-    background-color: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    width: 100%;
-    border-radius: 15px;
-    padding: 32px;
-    backdrop-filter: blur(10px);
-  }
-
-  .glass-button {
-    display: inline-block;
-    padding: 24px 32px;
-    border: 0;
-    text-decoration: none;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(30px);
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    text-transform: uppercase;
-  }
-
-  .glass-button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-  /* Extra styles for demo */
-  /* Article:  https://superdevresources.com/glassmorphism-ui-css/ */
-  body {
-    background: url(https://superdevresources.com/wp-content/uploads/2015/12/new-york-background.jpg)
-      no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    text-align: center;
-    font-family: "Open Sans", sans-serif;
-  }
-
-  .glass-panel {
-    max-width: 600px;
-  }
-
-  .glass-button {
-    margin: 15px;
-    margin-top: 40px;
-  }
-
-  h1,
-  h1 a {
-    min-height: 120px;
-    width: 90%;
-    max-width: 700px;
-    vertical-align: middle;
-    text-align: center;
-    margin: 0 auto;
-    text-decoration: none;
-    color: #fff;
-    padding-top: 60px;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  p {
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 32px;
-    color: rgba(255, 255, 255, 0.6);
-  }
-</style>
+</body>
+</html>
