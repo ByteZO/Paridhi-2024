@@ -20,7 +20,7 @@ export const StyledContainer = styled.section`
 export const MainInfo = styled.div`
   padding: 20px;
   height: 27rem;
-  min-width: 20rem;
+  min-width: 100px;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(1px);
@@ -36,7 +36,7 @@ export const MainInfo = styled.div`
 export const Domains = styled.h1`
   padding: 20px;
   height: 27rem;
-  width: auto;
+  min-width: 100px;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(1px);
@@ -47,4 +47,4 @@ export const Domains = styled.h1`
   display: flex;
   flex-direction: column;
   font-size: 1rem;
-`;  
+`;
