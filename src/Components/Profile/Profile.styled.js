@@ -7,44 +7,69 @@ export const StyledContainer = styled.section`
   padding-top: 15vh;
   min-height: 100vh;
   width: 100%;
+
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  gap: 20px;
-  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 10px;
+  @media (max-width: 1221px) {
+    flex-direction: column;
+  }
 `;
 
 export const MainInfo = styled.div`
   padding: 20px;
-  height: 27rem;
-  min-width: 100px;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 30%;
+  min-width: 35%;
+  font-size: 10px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (max-width: 400px) {
+    width: 90%;
+  }
+`;
+
+export const CardsSection = styled.section`
+  min-width: 30%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @media (max-width: 400px) {
+    width: 100%;
+    gap: 10px;
+  }
 `;
 
 export const Domains = styled.h1`
   padding: 20px;
-  height: 27rem;
-  min-width: 100px;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  min-height: 200px;
+  width: 48%;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
   color: white;
   display: flex;
   flex-direction: column;
-  font-size: 1rem;
+  align-items: center;
+
+  font-size: 14px;
+  @media (max-width: 400px) {
+    padding: 10px;
+    font-size: 13px;
+    width: 70%;
+    height: auto;
+  }
 `;

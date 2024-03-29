@@ -1,34 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Grid Example</title>
-  <style>
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 2fr)); /* Adjust minmax values as needed */
-      gap: 10px; /* Adjust gap between items */
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Example</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(200px, 2fr)
+        ); /* Adjust minmax values as needed */
+        gap: 10px; /* Adjust gap between items */
+      }
 
-    .item {
-      background-color: lightblue;
-      padding: 20px;
-      border: 1px solid #000;
-      box-sizing: border-box;
+      .item {
+        background-color: lightblue;
+        padding: 20px;
+        border: 1px solid #000;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+      <div class="item">Item 7</div>
+      <!-- Add more items as needed -->
+    </div>
+  </body>
+  <script>
+    const domainGaming = {
+      gaming1Tid: "qweqw",
+      gaming2Tid: "paridhi12002105202024",
+      gaming3Tid: "paridhi1200210520202s4",
+    };
+
+    // const domainRegistrationCardHandler = (domainObject) => {
+    //   function checkValues(domainObject) {
+    //     for (let key in domainObject) {
+    //       if (domainObject[key] !== null) {
+    //         return false;
+    //       }
+    //       return true;
+    //     }
+    //   }
+
+    //   if (!checkValues(domainObject)) {
+    //     for (let key in domainObject) {
+    //       key ? console.log(domainObject[key]) : " this is emty !!!";
+    //     }
+    //   } else console.log(" the hole thing is emty!!!\n");
+    // };
+
+    function anyKeyValueTrue(obj) {
+      for (let key in obj) {
+        if (obj[key]) {
+          return true;
+        }
+      }
+      return false;
     }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="item">Item 1</div>
-    <div class="item">Item 2</div>
-    <div class="item">Item 3</div>
-    <div class="item">Item 4</div>
-    <div class="item">Item 5</div>
-    <div class="item">Item 6</div>
-    <div class="item">Item 7</div>
-    <!-- Add more items as needed -->
-  </div>
-</body>
+    console.log(anyKeyValueTrue(domainGaming));
+
+    function checkValuesNull(obj) {
+      let result = [];
+      for (let key in obj) {
+        result.push(obj[key] === null);
+      }
+      return result;
+    }
+    console.log(checkValuesNull(domainGaming));
+  </script>
 </html>
