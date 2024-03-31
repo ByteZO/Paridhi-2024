@@ -68,6 +68,7 @@ const domainRobotics = {
   "RoboSoccer TID": testUserData.roboSoccerTid,
   "RoboWar-8kg TID ": testUserData.roboWar8kgTid,
   "RoboWar-15kg TID": testUserData.roboWar15kgTid,
+  "LFR TID": testUserData.lfrtid,
 };
 
 const domainGaming = {
