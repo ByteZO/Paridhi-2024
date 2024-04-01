@@ -63,7 +63,7 @@ export const Domains = styled.h1`
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
+ 
 
   font-size: 14px;
   @media (max-width: 400px) {
