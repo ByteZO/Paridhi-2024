@@ -143,6 +143,14 @@ const Profile = () => {
           ) : (
             <></>
           )}
+          {showCardHandler(domainGaming) ? (
+            <Domains>
+              <h1>GAMING</h1>
+              {showOptionsHandler(domainGaming).map((main) => main)}
+            </Domains>
+          ) : (
+            <></>
+          )}
           {showCardHandler(domainElectrical) ? (
             <Domains>
               <h1>Electricl</h1>
@@ -155,14 +163,6 @@ const Profile = () => {
             <Domains>
               <h1>Robotics</h1>
               {showOptionsHandler(domainRobotics).map((main) => main)}
-            </Domains>
-          ) : (
-            <></>
-          )}
-          {showCardHandler(domainGaming) ? (
-            <Domains>
-              <h1>GAMING</h1>
-              {showOptionsHandler(domainGaming).map((main) => main)}
             </Domains>
           ) : (
             <></>

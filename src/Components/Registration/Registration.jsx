@@ -2,7 +2,7 @@ import React from "react";
 import { Main } from "./Registration.styled";
 import { useParams } from "react-router-dom";
 import InfoBanner from "../InfoBanner/InfoBanner";
-export const Registration = () => {
+const Registration = () => {
   const { EvnetRegistration } = useParams();
   const DomainEvents = {
     WebDevelopment: {
@@ -66,3 +66,5 @@ export const Registration = () => {
     </>
   );
 };
+
+export default Registration;
