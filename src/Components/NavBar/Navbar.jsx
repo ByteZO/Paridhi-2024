@@ -9,6 +9,7 @@ import {
   StyledContainer,
   SubLogo,
 } from "./Navbar.styled";
+
 import megalogo from "../../assets/Images/megaLogo.png";
 
 const Navbar = () => {
