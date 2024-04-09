@@ -1,12 +1,22 @@
+// Required Import
 import React, { Suspense, lazy } from "react";
+import styled, { keyframes } from "styled-components";
 import Layout from "./Layout/Layout";
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+
+// Lazy loading Conversion
 const Hero = lazy(() => import("./Components/Hero/Hero"));
 const Events = lazy(() => import("./Components/Events/Events"));
 const Profile = lazy(() => import("./Components/Profile/Profile"));
 const WorkShop = lazy(() => import("./Components/WorkShop/WorkShop"));
 const Sponsors = lazy(() => import("./Components/Sponsors/Sponsors"));
 const OurTeam = lazy(() => import("./Components/OurTeam/OurTeam"));
-import Loading from "../src/assets/Videos/Loading.mp4";
+
 const Registration = lazy(() =>
   import("./Components/Registration/Registration")
 );
@@ -16,40 +26,45 @@ const DomainEvents = lazy(() =>
 const PrePredhiEvents = lazy(() =>
   import("./Components/PreParedhiEvents/PrePredhiEvents")
 );
-import {
-  Route,
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from "react-router-dom";
 
-const LoadingYOYO = () => {
-  return (
-    <>
-      <div
-        style={{
-          backgroundColor: "black",
-          height: "100vh",
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <video
-          style={{
-            width: "200px",
-          }}
-          autoPlay
-          loop
-        >
-          <source src={Loading} type="video/mp4" />
-        </video>
-      </div>
-    </>
-  );
-};
+// Spinnner Styling 
+const spinnerAnimation = keyframes`
+  100% {
+    transform: rotate(1turn);
+  }
+`;
 
+const Spinner = styled.div`
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border: 4.5px solid #0000;
+  border-radius: 50%;
+  border-color: #222ce6 #0000;
+  animation: ${spinnerAnimation} 1s infinite linear;
+
+  &::before,
+  &::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 2.2px;
+    border: inherit;
+    border-radius: 50%;
+  }
+
+  &::before {
+    border-color: #e70000 #0000;
+    animation: inherit;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+  }
+
+  &::after {
+    margin: 8.9px;
+  }
+`;
+
+// Defining the Route
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
@@ -59,7 +74,7 @@ const router = createBrowserRouter(
           <Suspense
             fallback={
               <>
-                <LoadingYOYO />
+                <Spinner />
               </>
             }
           >
@@ -71,12 +86,12 @@ const router = createBrowserRouter(
         path="events"
         element={
           <Suspense
-          fallback={
-            <>
-              <LoadingYOYO />
-            </>
-          }
-        >
+            fallback={
+              <>
+                <Spinner />
+              </>
+            }
+          >
             <Events />
           </Suspense>
         }
@@ -85,12 +100,12 @@ const router = createBrowserRouter(
         path="workshop"
         element={
           <Suspense
-          fallback={
-            <>
-              <LoadingYOYO />
-            </>
-          }
-        >
+            fallback={
+              <>
+                <Spinner />
+              </>
+            }
+          >
             <WorkShop />
           </Suspense>
         }
@@ -99,12 +114,12 @@ const router = createBrowserRouter(
         path="our_team"
         element={
           <Suspense
-          fallback={
-            <>
-              <LoadingYOYO />
-            </>
-          }
-        >
+            fallback={
+              <>
+                <Spinner />
+              </>
+            }
+          >
             <OurTeam />
           </Suspense>
         }
@@ -115,7 +130,7 @@ const router = createBrowserRouter(
           <Suspense
             fallback={
               <>
-                <LoadingYOYO />
+                <Spinner />
               </>
             }
           >
@@ -129,7 +144,7 @@ const router = createBrowserRouter(
           <Suspense
             fallback={
               <>
-                <LoadingYOYO />
+                <Spinner />
               </>
             }
           >
@@ -141,12 +156,12 @@ const router = createBrowserRouter(
         path="events/:Domain"
         element={
           <Suspense
-          fallback={
-            <>
-              <LoadingYOYO />
-            </>
-          }
-        >
+            fallback={
+              <>
+                <Spinner />
+              </>
+            }
+          >
             <DomainEvents />
           </Suspense>
         }
@@ -155,12 +170,12 @@ const router = createBrowserRouter(
         path="profile"
         element={
           <Suspense
-          fallback={
-            <>
-              <LoadingYOYO />
-            </>
-          }
-        >
+            fallback={
+              <>
+                <Spinner />
+              </>
+            }
+          >
             <Profile />
           </Suspense>
         }
@@ -168,13 +183,7 @@ const router = createBrowserRouter(
       <Route
         path="events/:Domain/:EvnetRegistration"
         element={
-          <Suspense
-            fallback={
-              <>
-                <LoadingYOYO />
-              </>
-            }
-          >
+          <Suspense fallback={<></>}>
             <Registration />
           </Suspense>
         }
@@ -182,6 +191,8 @@ const router = createBrowserRouter(
     </Route>
   )
 );
+
+// Exporting the App component
 
 export default function App() {
   return (
