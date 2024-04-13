@@ -34,7 +34,7 @@ export const StyledContainer = styled.div`
   position: absolute;
   z-index: 2;
   bottom: 90vh;
-  animation: ${NavDownAnimation} 2s ease-out;
+  animation: ${NavDownAnimation} 300ms ease-out;
 `;
 
 export const NavbarContainer = styled.nav`
