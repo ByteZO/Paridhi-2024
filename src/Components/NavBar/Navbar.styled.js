@@ -12,6 +12,18 @@ const underlineAnimation = keyframes`
   }
 `;
 
+const NavDownAnimation = keyframes`
+
+from {
+  bottom: 100vh;
+  }
+
+  to {
+    bottom: 90vh;
+  }
+
+`;
+
 export const StyledContainer = styled.div`
   background-image: url("https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
@@ -19,7 +31,10 @@ export const StyledContainer = styled.div`
   height: 10vh;
   width: 100%;
   position: fixed;
+  position: absolute;
   z-index: 2;
+  bottom: 90vh;
+  animation: ${NavDownAnimation} 2s ease-out;
 `;
 
 export const NavbarContainer = styled.nav`
@@ -150,5 +165,3 @@ export const NavLinkName = styled(NavLink)`
     }
   }
 `;
-
-
